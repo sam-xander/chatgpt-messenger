@@ -1,9 +1,67 @@
 import React from "react";
+import {
+  BoltIcon,
+  ExclamationTriangleIcon,
+  SunIcon,
+} from "@heroicons/react/24/outline";
 
 function HomePage() {
   return (
-    <div>
-      <h1>ChatGPT Messenger</h1>
+    <div className="flex flex-col items-center justify-center h-screen px-2 text-white">
+      <h1 className="mb-20 text-5xl font-bold">ChatGPT</h1>
+      <div className="flex space-x-2 text-center">
+        <div>
+          <div className="flex flex-col items-center justify-center mb-5">
+            <SunIcon className="w-8 h-8" />
+            <h2>Examples</h2>
+          </div>
+          <div className="space-y-2 ">
+            <p className="p-4 bg-gray-700/50 rounded-lg max-w-[300px]">
+              &quot;Explain something to me.&quot;
+            </p>
+            <p className="p-4 bg-gray-700/50 rounded-lg max-w-[300px]">
+              &quot;What is the difference between a dog and a cat?&quot;
+            </p>
+            <p className="p-4 bg-gray-700/50 rounded-lg max-w-[300px]">
+              &quot;What is the color of the sun?&quot;
+            </p>
+          </div>
+        </div>
+        <div>
+          <div className="flex flex-col items-center justify-center mb-5">
+            <BoltIcon className="w-8 h-8" />
+            <h2>Capabilities</h2>
+          </div>
+          <div className="space-y-2 ">
+            <p className="p-4 bg-gray-700/50 rounded-lg max-w-[300px]">
+              Change which ChatGPT Model is used.
+            </p>
+            <p className="p-4 bg-gray-700/50 rounded-lg max-w-[300px]">
+              Messages are stored in Firebase&apos;s Firestore
+            </p>
+            <p className="p-4 bg-gray-700/50 rounded-lg max-w-[300px]">
+              Hot Toast notifications when ChatGPT is thinking!
+            </p>
+          </div>
+        </div>
+        <div>
+          <div className="flex flex-col items-center justify-center mb-5">
+            <ExclamationTriangleIcon className="w-8 h-8" />
+            <h2>Limitations</h2>
+          </div>
+          <div className="space-y-2 ">
+            <p className="p-4 bg-gray-700/50 rounded-lg max-w-[300px]">
+              May occasionally generate incorrect information.
+            </p>
+            <p className="p-4 bg-gray-700/50 rounded-lg max-w-[300px]">
+              May occasionally produce harmful instructions or biased content
+            </p>
+            <p className="p-4 bg-gray-700/50 rounded-lg max-w-[300px]">
+              Limited knowledge of world events after 2021
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
